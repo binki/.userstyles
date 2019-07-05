@@ -1,0 +1,65 @@
+@-moz-document url-prefix("https://play.google.com/music/listen") {
+body.qp {
+    background: black;
+    color: grey;
+}
+
+.paper-toolbar-1 {
+    background: black;
+    color: grey;
+}
+.music-logo {
+    filter: invert();
+}
+
+/* the tracklist */
+.cluster .songlist-container {
+    color: grey;
+}
+.cluster .song-table [data-col] {
+    color: #aaa;
+}
+/*
+.cluster .song-table th {
+    border-right: 1pt solid grey;
+}
+.cluster .song-table th:last-of-type {
+    border-right: none;
+}
+*/
+
+div.detail-wrapper div.gpm-detail-page-header > [slot] {
+    color: grey;
+}
+
+.cluster .header .cluster-title {
+    color: #aaaaaa;
+}
+
+/* tracklist row. Must repeat background color from tracklist. */
+.cluster .songlist-container,
+.song-row td {
+   background: #111; 
+}
+.song-row:hover,
+.song-row:hover td {
+    background: #333;
+}
+.song-row [data-col="rating"] {
+    filter: invert();
+}
+
+a,
+.simple-dialog a {
+    color: grey;
+    text-decoration: underline;
+}
+
+/* The little “similar artists” tiles */
+.material-card .title {
+    color: #aaa;
+}
+body.qp .fade-out.gray::after {
+    background: black;
+}
+}

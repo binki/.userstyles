@@ -1,0 +1,32 @@
+@-moz-document url-prefix("https://app.glip.com/") {
+.postslist,
+#postswrapper,
+#postswrapper .compose,
+.chat-textarea,
+.post .post_text,
+.post.editing #edit_chat_form textarea {
+    background: transparent;
+    color: inherit;
+}
+
+.centerrail {
+    background: black;
+    color: #ddd;
+}
+
+.mentions {
+    /* Override style="" */
+    background-color: black !important;
+}
+
+a.at_mention_compose::before,
+a.at_mention_compose::after{
+    background-color: black;
+}
+
+/* override an !important */
+h1.stream-header {
+    background-color: transparent !important;
+    color: inherit;
+}
+}
