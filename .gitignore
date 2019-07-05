@@ -1,0 +1,4 @@
+# Common editor swapfile/backup suffices
+*\#*
+*~
+*.swp
