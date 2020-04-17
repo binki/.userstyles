@@ -1,0 +1,112 @@
+/* BEGIN blue page header */
+#home-wrapper > header {
+    background: #111;
+}
+/* END blue page header */
+
+/* BEGIN inner conversation pane thing */
+.conversation-page {
+    background: #000;
+}
+
+.conversation-page {
+    background: #000;
+}
+
+/* hovered conversation card… */
+[data-name=conversation-card]:hover,
+[data-name=conversation-card]:focus {
+    background: #111;
+}
+
+/* specificity wars -_- */
+[data-test-automation-id] > [data-test-automation-id=conversation-page-header] {
+    background: black;
+}
+
+/* group conversation title */
+[data-test-automation-id=conversation-page-header-title] > div,
+/* individual person conversation title (yes, they’re different!), specificity wars! */
+h6[data-test-automation-id=conversation-page-header-title][title] {
+    color: #ddd;
+}
+
+[data-name],
+[data-test-automation-id=file-name]{
+    color: #999;
+}
+
+a[id].at_mention_compose {
+    color: #449;
+}
+
+/* time separator in conversation */
+[data-test-automation-class=time-node-divider] > div,
+[data-test-automation-class=time-node-divider] > div > * {
+    background: #222;
+    color: #aaa;
+}
+
+/* text editor when focused  */
+.message-input .ql-snow:hover,
+/* text editor content text  */
+.message-input .ql-snow .ql-editor {
+    background: black;
+    color: #aaa;
+}
+
+/* END inner conversation pane thing */
+
+/* BEGIN left iconbar */
+#app-main-section .left-paper {
+    background: #111;
+}
+#app-main-section .left-paper .nav-icon .icon svg,
+#app-main-section .left-paper .nav-text * {
+    /* svg */
+    fill: #999;
+    color: #999;
+}
+#app-main-section .left-paper .selected[role=button] .nav-icon .icon svg,
+#app-main-section .left-paper .active .nav-txt * {
+    fill: #a44;
+    color: #a44;
+}
+/* The little message count bubble */
+#app-main-section .left-paper span.umi {
+    color: #aaa !important;    
+    background: #400 !important;
+    border-color: #999;
+}
+/* END left iconbar */
+
+/* BEGIN left sidebar */
+
+[data-test-automation-id=leftRail] {
+    background: black;
+}
+/* mentions and bookmarks buttons */
+[data-test-automation-id=leftRail] div[role=button][data-test-automation-id^=entry-] {
+    background: #222;
+}
+[data-test-automation-id=leftRail] div[role=button][data-test-automation-id^=entry-] > p {
+    color: #aaa;
+}
+/* unreadonly trigger */
+[data-test-automation-id=leftRail] li[role=menuitem][data-test-automation-id] > p {
+    color: #999;
+}
+/* groupings header */
+div[data-test-automation-id].conversation-list-section-header > div > p {
+    color: #aaa;
+}
+/* person name in grouping */
+li[data-test-automation-class].conversation-list-item > p[title] {
+    color: #999;
+}
+/* selected person name */
+[data-test-automation-id=leftRail] li[data-test-automation-class].conversation-list-item.selected.selected.selected.selected.selected {
+    background: rgba(255, 64, 64, 0.30);
+}
+
+/* END left sidebar */
