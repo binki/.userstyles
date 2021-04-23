@@ -14,8 +14,8 @@
 }
 
 /* hovered conversation card… */
-[data-name=conversation-card]:hover,
-[data-name=conversation-card]:focus {
+[data-name=conversation-card][data-id]:hover,
+[data-name=conversation-card][data-id]:focus {
     background: #111;
 }
 
@@ -38,6 +38,19 @@ h6[data-test-automation-id=conversation-page-header-title][title] {
 
 a[id].at_mention_compose {
     color: #449;
+}
+
+/* the mention composer/name selector */
+[data-test-automation-id=mention-panel] {
+    border: 1pt solid #444;
+    background: #000;
+    color: #999;
+}
+[data-test-automation-id=mention-panel] [data-test-automation-class=match-item] {
+    color: #999;
+}
+[data-test-automation-id=mention-panel] [data-test-automation-class=match-item].selected {
+    background: #400;
 }
 
 /* time separator in conversation */
@@ -93,7 +106,7 @@ a[id].at_mention_compose {
     color: #aaa;
 }
 /* unreadonly trigger */
-[data-test-automation-id=leftRail] li[role=menuitem][data-test-automation-id] > p {
+[data-test-automation-id=leftRail] li[data-test-automation-id=unreadOnlyToggler] > p {
     color: #999;
 }
 /* groupings header */
@@ -101,12 +114,69 @@ div[data-test-automation-id].conversation-list-section-header > div > p {
     color: #aaa;
 }
 /* person name in grouping */
-li[data-test-automation-class].conversation-list-item > p[title] {
+ul.conversation-list-section-collapse > li > [data-test-automation-class=conversation-list-item] > p[title] {
     color: #999;
 }
 /* selected person name */
-[data-test-automation-id=leftRail] li[data-test-automation-class].conversation-list-item.selected.selected.selected.selected.selected {
-    background: rgba(255, 64, 64, 0.30);
+[data-test-automation-id=leftRail] ul.conversation-list-section-collapse > li > div.selected.selected.selected.selected.selected.selected {
+    background: rgba(255, 64, 64, 0.30) !important;
+    color: #999;
+}
+/* New Folder button */
+[data-test-automation-id=leftRail] [data-test-automation-id=createFolder] {
+    background: #000;
+}
+[data-test-automation-id=leftRail] [data-test-automation-id=createFolder] > p{
+    color: #999;
 }
 
 /* END left sidebar */
+
+/* BEGIN top icon bar/dropdowns */
+
+/* Dial Pad/New Actions buttons */
+button.MuiFab-root.MuiButtonBase-root {
+    background: #444;
+}
+button.MuiFab-root.MuiButtonBase-root:hover {
+    background: #944;
+}
+button.MuiFab-root.MuiButtonBase-root .icon svg {
+    color: #bbb;
+}
+
+/* User profile button dropdown */
+.MuiPaper-root {
+    background: #000;
+    color: #999;
+    border: 1pt solid #444;
+}
+.MuiPaper-root > div {
+    background: transparent;
+    color: inherit;
+}
+/* User profile button dropwdown “contact card” */
+[class*=StyledContactWrapper],
+[class*=StyledContactWrapper] [class*=StyledContactInfoName]{
+    background: #000;
+    color: inherit;
+}
+/* The other members of the user profile button dropdown */
+.MuiListItem-root {
+  color: inherit;
+}
+/* The sub-dropdowns of the profile button dropdown */
+.MuiListItem-button {
+    background: transparent;
+    color: inherit;
+}
+.MuiListItem-button:hover {
+    background: rgba(255, 128, 128, 0.15);
+}
+
+/* END top icon bar/dropdowns */
+
+/* Remove the annoying “We recommend you use a supported browser or install the app” banner. */
+div[data-test-automation-class=unsupportedBrowserBanner] {
+    display: none;
+}
