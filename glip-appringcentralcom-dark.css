@@ -178,6 +178,6 @@ button.MuiFab-root.MuiButtonBase-root .icon svg {
 /* END top icon bar/dropdowns */
 
 /* Remove the annoying “We recommend you use a supported browser or install the app” banner. */
-div[data-test-automation-class=unsupportedBrowserBanner] {
+div[data-test-automation-id=unsupportedBrowserBanner] {
     display: none;
 }
