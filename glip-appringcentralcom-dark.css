@@ -72,22 +72,22 @@ a[id].at_mention_compose {
 /* END inner conversation pane thing */
 
 /* BEGIN left iconbar */
-#app-main-section .left-paper {
+#app-main-section [data-test-automation-id=leftPanel] > div {
     background: #111;
 }
-#app-main-section .left-paper .nav-icon .icon svg,
-#app-main-section .left-paper .nav-text * {
+#app-main-section [data-test-automation-id=leftPanel] .icon svg,
+#app-main-section [data-test-automation-id=leftPanel] [data-test-automation-class~=nav-text] * {
     /* svg */
     fill: #999;
     color: #999;
 }
-#app-main-section .left-paper .selected[role=button] .nav-icon .icon svg,
-#app-main-section .left-paper .active .nav-txt * {
+#app-main-section [data-test-automation-id=leftPanel] .Mui-selected .icon svg,
+#app-main-section [data-test-automation-id=leftPanel] .Mui-selected [data-test-automation-class~=nav-text] * {
     fill: #a44;
     color: #a44;
 }
 /* The little message count bubble */
-#app-main-section .left-paper span.umi {
+#app-main-section [data-test-automation-id=leftPanel] span.umi {
     color: #aaa !important;    
     background: #400 !important;
     border-color: #999;
