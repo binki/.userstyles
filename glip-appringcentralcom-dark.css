@@ -27,7 +27,9 @@
 /* group conversation title */
 [data-test-automation-id=conversation-page-header-title] > div,
 /* individual person conversation title (yes, they’re different!), specificity wars! */
-h6[data-test-automation-id=conversation-page-header-title][title] {
+h6[data-test-automation-id=conversation-page-header-title][title],
+/* individual person conversation title (yes, they’re different!), specificity wars! */
+h2[data-test-automation-id=conversation-page-header-title][title] {
     color: #ddd;
 }
 
@@ -128,6 +130,10 @@ ul.conversation-list-section-collapse > li > [data-test-automation-class=convers
     background: #000;
 }
 [data-test-automation-id=leftRail] [data-test-automation-id=createFolder] > p{
+    color: #999;
+}
+/* conversation name (probably only necessary when using light theme which the site defaults to occasionally) */
+[data-test-automation-id=leftRail] > div.conversation-list-section-collapse div.conversation-list-item__middle-wrapper > p {
     color: #999;
 }
 
