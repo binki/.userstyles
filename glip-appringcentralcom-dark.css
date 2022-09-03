@@ -1,3 +1,8 @@
+body {
+    background: black;
+    color: #999;
+}
+
 /* BEGIN blue page header */
 #home-wrapper > header {
     background: #111;
@@ -23,14 +28,19 @@ div.MuiTextField-root.RcTextField-root,
 li.MuiListSubheader-root {
     background: inherit;
 }
-.MuiButton-contained.RcButton-contained,
-.MuiButton-contained.RcButton-contained:hover,
+.RcButton-contained.RcButton-contained,
+.RcButton-contained.RcButton-contained:hover,
+.RcIconButton-contained.RcIconButton-contained,
+.RcIconButton-contained.RcIconButton-contained:hover,
 div[data-test-automation-id=action-bar][tabindex],
 div[data-test-automation-id=action-bar][tabindex]:hover,
 [data-test-automation-id=action-bar] div div[data-test-automation-id=emoji-reaction-quick-pick],
 [data-test-automation-id=action-bar] div div[data-test-automation-id=emoji-reaction-quick-pick]:hover {
     background: black;
     border: 1pt solid #999;
+}
+.RcIconButton-contained.RcIconButton-contained:hover {
+    color: #997;
 }
 [data-test-automation-id=action-bar] svg {
     fill: #997;
@@ -54,6 +64,7 @@ ul[data-test-automation-id=search-results] {
 /* BEGIN inner conversation pane thing */
 .conversation-page {
     background: #000;
+    border-left: 1pt solid #999;
 }
 
 .conversation-page {
@@ -127,6 +138,27 @@ a[id].at_mention_compose {
 .emoji-mart-category-label span {
     background: none;
     color: inherit;
+}
+
+/* profile window */
+.MuiPaper-root .MuiTypography-root[data-color],
+.MuiFormControlLabel-root.RcFormControlLabel-root,
+.MuiTypography-root.MuiFormControlLabel-label,
+div[data-test-automation-id],
+div[data-form-type],
+[data-test-automation-class][data-test-automation-class],
+div[data-name],
+#app-main-section,
+.MuiListItemText-primary.RcListItemText-primary,
+.MuiButtonBase-root,
+.MuiTypography-root,
+/* lol this is a way to win specificity wars -_- */
+.MuiListItem-root.MuiListItem-root {
+    background: none;
+    color: inherit;
+}
+div[data-test-automation-class]:hover {
+    background: #111;
 }
 
 /* END inner conversation pane thing */
