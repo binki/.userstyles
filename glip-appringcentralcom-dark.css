@@ -55,9 +55,17 @@ div.MuiTextField-root.RcTextField-root div.MuiInputBase-root.RcTextFieldInput-ro
 }
 ul[data-test-automation-id=search-records],
 div[data-test-automation-id=search-item-text],
-ul[data-test-automation-id=search-results] {
+ul[data-test-automation-id=search-results],
+h3[class],
+div[class],
+[data-test-automation-id][data-test-automation-id] {
     background: inherit;
     color: inherit;
+}
+.zoomGroup.zoomGroup {
+    border: 1pt solid #999;
+    background: black;
+    color: #999;
 }
 /* END popup seach box via search textbox */
 
@@ -75,6 +83,10 @@ ul[data-test-automation-id=search-results] {
 [data-name=conversation-card][data-id]:hover,
 [data-name=conversation-card][data-id]:focus {
     background: #111;
+}
+
+[data-name=conversation-card][data-name=conversation-card] q {
+    border-left-width: 2pt;
 }
 
 /* specificity wars -_- */
@@ -153,7 +165,8 @@ div[data-name],
 .MuiButtonBase-root,
 .MuiTypography-root,
 /* lol this is a way to win specificity wars -_- */
-.MuiListItem-root.MuiListItem-root {
+.MuiListItem-root.MuiListItem-root,
+[data-name=conversation-card][data-name=conversation-card] q {
     background: none;
     color: inherit;
 }
@@ -212,7 +225,7 @@ ul.conversation-list-section-collapse > li > [data-test-automation-class=convers
 }
 /* selected person name */
 [data-test-automation-id=leftRail] ul.conversation-list-section-collapse > li > div.selected.selected.selected.selected.selected.selected {
-    background: rgba(255, 64, 64, 0.30) !important;
+    background: #311 !important;
     color: #999;
 }
 /* New Folder button */
@@ -267,8 +280,8 @@ button.MuiFab-root.MuiButtonBase-root .icon svg {
     background: transparent;
     color: inherit;
 }
-.MuiListItem-button:hover {
-    background: rgba(255, 128, 128, 0.15);
+.MuiListItem-button.MuiListItem-button:hover {
+    background: #211;
 }
 
 /* END top icon bar/dropdowns */
