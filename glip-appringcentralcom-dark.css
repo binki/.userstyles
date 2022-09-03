@@ -2,7 +2,38 @@
 #home-wrapper > header {
     background: #111;
 }
+.RcAvatar-avatarContainer {
+    background: black;
+}
+p[data-test-automation-id=logo][data-color=initial] {
+    color: #844;
+}
+button.RcIconButton-root.RcIconButton-contained {
+    background: black;
+    color: #866;
+}
 /* END blue page header */
+
+/* BEGIN popup search box via search textbox */
+div.RcDialog-paper.MuiPaper-root.MuiDialog-paper {
+    background: black;
+    border: 1pt solid #999;
+}
+div.MuiTextField-root.RcTextField-root {
+    background: inherit;
+}
+div.MuiTextField-root.RcTextField-root div.MuiInputBase-root.RcTextFieldInput-root,
+div.MuiTextField-root.RcTextField-root div.MuiInputBase-root.RcTextFieldInput-root:hover {
+    background: #111;
+    color: #999;
+}
+ul[data-test-automation-id=search-records],
+div[data-test-automation-id=search-item-text],
+ul[data-test-automation-id=search-results] {
+    background: inherit;
+    color: inherit;
+}
+/* END popup seach box via search textbox */
 
 /* BEGIN inner conversation pane thing */
 .conversation-page {
