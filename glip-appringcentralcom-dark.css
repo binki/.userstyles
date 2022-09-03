@@ -19,8 +19,24 @@ div.RcDialog-paper.MuiPaper-root.MuiDialog-paper {
     background: black;
     border: 1pt solid #999;
 }
-div.MuiTextField-root.RcTextField-root {
+div.MuiTextField-root.RcTextField-root,
+li.MuiListSubheader-root {
     background: inherit;
+}
+.MuiButton-contained.RcButton-contained,
+.MuiButton-contained.RcButton-contained:hover,
+div[data-test-automation-id=action-bar][tabindex],
+div[data-test-automation-id=action-bar][tabindex]:hover,
+[data-test-automation-id=action-bar] div div[data-test-automation-id=emoji-reaction-quick-pick],
+[data-test-automation-id=action-bar] div div[data-test-automation-id=emoji-reaction-quick-pick]:hover {
+    background: black;
+    border: 1pt solid #999;
+}
+[data-test-automation-id=action-bar] svg {
+    fill: #997;
+}
+[data-test-automation-id=action-bar] span:hover svg {
+    fill: #b97;
 }
 div.MuiTextField-root.RcTextField-root div.MuiInputBase-root.RcTextFieldInput-root,
 div.MuiTextField-root.RcTextField-root div.MuiInputBase-root.RcTextFieldInput-root:hover {
@@ -100,6 +116,17 @@ a[id].at_mention_compose {
     background: black;
     color: #aaa;
     caret-color: #baa;
+}
+
+/* emoji chooser */
+.emoji-mart {
+    background: black !important;
+    color: #999;
+}
+.emoji-mart *,
+.emoji-mart-category-label span {
+    background: none;
+    color: inherit;
 }
 
 /* END inner conversation pane thing */
