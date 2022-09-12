@@ -1,3 +1,4 @@
+@-moz-document domain("app.ringcentral.com") {
 body {
     background: black;
     color: #999;
@@ -289,4 +290,6 @@ button.MuiFab-root.MuiButtonBase-root .icon svg {
 /* Remove the annoying “We recommend you use a supported browser or install the app” banner. */
 div[data-test-automation-id=unsupportedBrowserBanner] {
     display: none;
+}
+
 }
