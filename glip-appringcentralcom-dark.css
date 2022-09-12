@@ -1,4 +1,7 @@
 @-moz-document domain("app.ringcentral.com") {
+/*
+ * https://github.com/binki/binki-ringcentral-dark-style
+ */
 body {
     background: black;
     color: #999;
