@@ -18,7 +18,7 @@ Yes, I know. Maybe I am supposed to turn the lights on or something. And, yes, i
 
 The goal of this theme is to provide a proper “OLED dark” theme. That is, backgrounds are true black, not grey, with the contrast starkness avoided by making the foreground colors dimmer if anything (to compensate for laptop manufacturers failing to provide backlight settings which are actually dim (this is one of the few things which Lenovo actually does right)).
 
-This theme should be usable even when the interface settings specify light. Since RingeCentral likes to forget its settings, this theme is optimized for use with the default theme. It probably will still work fine if you use the Dark theme, but that is not guaranteed. It is in fact likely to be broken if you use other themes.
+This theme should be usable even when the interface settings specify light. Since RingCentral likes to forget its settings, this theme is optimized for use with the default theme. It probably will still work fine if you use the Dark theme, but that is not guaranteed. It is in fact likely to be broken if you use other themes.
 
 ## Development
 
