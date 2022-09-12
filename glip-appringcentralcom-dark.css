@@ -1,32 +1,295 @@
-@-moz-document url-prefix("https://app.ringcenral.com/") {
-.postslist,
-#postswrapper,
-#postswrapper .compose,
-.chat-textarea,
-.post .post_text,
-.post.editing #edit_chat_form textarea {
-    background: transparent;
-    color: inherit;
+@-moz-document domain("app.ringcentral.com") {
+body {
+    background: black;
+    color: #999;
 }
 
-.centerrail {
+/* BEGIN blue page header */
+#home-wrapper > header {
+    background: #111;
+}
+.RcAvatar-avatarContainer {
     background: black;
+}
+p[data-test-automation-id=logo][data-color=initial] {
+    color: #844;
+}
+button.RcIconButton-root.RcIconButton-contained {
+    background: black;
+    color: #866;
+}
+/* END blue page header */
+
+/* BEGIN popup search box via search textbox */
+div.RcDialog-paper.MuiPaper-root.MuiDialog-paper {
+    background: black;
+    border: 1pt solid #999;
+}
+div.MuiTextField-root.RcTextField-root,
+li.MuiListSubheader-root {
+    background: inherit;
+}
+.RcButton-contained.RcButton-contained,
+.RcButton-contained.RcButton-contained:hover,
+.RcIconButton-contained.RcIconButton-contained,
+.RcIconButton-contained.RcIconButton-contained:hover,
+div[data-test-automation-id=action-bar][tabindex],
+div[data-test-automation-id=action-bar][tabindex]:hover,
+[data-test-automation-id=action-bar] div div[data-test-automation-id=emoji-reaction-quick-pick],
+[data-test-automation-id=action-bar] div div[data-test-automation-id=emoji-reaction-quick-pick]:hover {
+    background: black;
+    border: 1pt solid #999;
+}
+.RcIconButton-contained.RcIconButton-contained:hover {
+    color: #997;
+}
+[data-test-automation-id=action-bar] svg {
+    fill: #997;
+}
+[data-test-automation-id=action-bar] span:hover svg {
+    fill: #b97;
+}
+div.MuiTextField-root.RcTextField-root div.MuiInputBase-root.RcTextFieldInput-root,
+div.MuiTextField-root.RcTextField-root div.MuiInputBase-root.RcTextFieldInput-root:hover {
+    background: #111;
+    color: #999;
+}
+ul[data-test-automation-id=search-records],
+div[data-test-automation-id=search-item-text],
+ul[data-test-automation-id=search-results],
+h3[class],
+div[class],
+[data-test-automation-id][data-test-automation-id] {
+    background: inherit;
+    color: inherit;
+}
+.zoomGroup.zoomGroup {
+    border: 1pt solid #999;
+    background: black;
+    color: #999;
+}
+/* END popup seach box via search textbox */
+
+/* BEGIN inner conversation pane thing */
+.conversation-page {
+    background: #000;
+    border-left: 1pt solid #999;
+}
+
+.conversation-page {
+    background: #000;
+}
+
+/* hovered conversation card… */
+[data-name=conversation-card][data-id]:hover,
+[data-name=conversation-card][data-id]:focus {
+    background: #111;
+}
+
+[data-name=conversation-card][data-name=conversation-card] q {
+    border-left-width: 2pt;
+}
+
+/* specificity wars -_- */
+[data-test-automation-id] > [data-test-automation-id=conversation-page-header] {
+    background: black;
+}
+
+/* group conversation title */
+[data-test-automation-id=conversation-page-header-title] > div,
+/* individual person conversation title (yes, they’re different!), specificity wars! */
+h6[data-test-automation-id=conversation-page-header-title][title],
+/* individual person conversation title (yes, they’re different!), specificity wars! */
+h2[data-test-automation-id=conversation-page-header-title][title] {
     color: #ddd;
 }
 
-.mentions {
-    /* Override style="" */
-    background-color: black !important;
+[data-name],
+[data-test-automation-id=file-name]{
+    color: #999;
 }
 
-a.at_mention_compose::before,
-a.at_mention_compose::after{
-    background-color: black;
+a[id].at_mention_compose {
+    color: #449;
 }
 
-/* override an !important */
-h1.stream-header {
-    background-color: transparent !important;
+/* the mention composer/name selector */
+[data-test-automation-id=mention-panel] {
+    border: 1pt solid #444;
+    background: #000;
+    color: #999;
+}
+[data-test-automation-id=mention-panel] [data-test-automation-class=match-item] {
+    color: #999;
+}
+[data-test-automation-id=mention-panel] [data-test-automation-class=match-item].selected {
+    background: #400;
+}
+
+/* time separator in conversation */
+[data-test-automation-class=time-node-divider] > div,
+[data-test-automation-class=time-node-divider] > div > * {
+    background: #222;
+    color: #aaa;
+}
+
+/* text editor when focused  */
+.message-input .ql-snow:hover,
+/* text editor content text  */
+.message-input .ql-snow .ql-editor {
+    background: black;
+    color: #aaa;
+    caret-color: #baa;
+}
+
+/* emoji chooser */
+.emoji-mart {
+    background: black !important;
+    color: #999;
+}
+.emoji-mart *,
+.emoji-mart-category-label span {
+    background: none;
     color: inherit;
 }
+
+/* profile window */
+.MuiPaper-root .MuiTypography-root[data-color],
+.MuiFormControlLabel-root.RcFormControlLabel-root,
+.MuiTypography-root.MuiFormControlLabel-label,
+div[data-test-automation-id],
+div[data-form-type],
+[data-test-automation-class][data-test-automation-class],
+div[data-name],
+#app-main-section,
+.MuiListItemText-primary.RcListItemText-primary,
+.MuiButtonBase-root,
+.MuiTypography-root,
+/* lol this is a way to win specificity wars -_- */
+.MuiListItem-root.MuiListItem-root,
+[data-name=conversation-card][data-name=conversation-card] q {
+    background: none;
+    color: inherit;
+}
+div[data-test-automation-class]:hover {
+    background: #111;
+}
+
+/* END inner conversation pane thing */
+
+/* BEGIN left iconbar */
+#app-main-section [data-test-automation-id=leftPanel] > div {
+    background: #111;
+}
+#app-main-section [data-test-automation-id=leftPanel] .icon svg,
+#app-main-section [data-test-automation-id=leftPanel] [data-test-automation-class~=nav-text] * {
+    /* svg */
+    fill: #999;
+    color: #999;
+}
+#app-main-section [data-test-automation-id=leftPanel] .Mui-selected .icon svg,
+#app-main-section [data-test-automation-id=leftPanel] .Mui-selected [data-test-automation-class~=nav-text] * {
+    fill: #a44;
+    color: #a44;
+}
+/* The little message count bubble */
+#app-main-section [data-test-automation-id=leftPanel] span.umi {
+    color: #aaa !important;    
+    background: #400 !important;
+    border-color: #999;
+}
+/* END left iconbar */
+
+/* BEGIN left sidebar */
+
+[data-test-automation-id=leftRail] {
+    background: black;
+}
+/* mentions and bookmarks buttons */
+[data-test-automation-id=leftRail] div[role=button][data-test-automation-id^=entry-] {
+    background: #222;
+}
+[data-test-automation-id=leftRail] div[role=button][data-test-automation-id^=entry-] > p {
+    color: #aaa;
+}
+/* unreadonly trigger */
+[data-test-automation-id=leftRail] li[data-test-automation-id=unreadOnlyToggler] > p {
+    color: #999;
+}
+/* groupings header */
+div[data-test-automation-id].conversation-list-section-header > div > p {
+    color: #aaa;
+}
+/* person name in grouping */
+ul.conversation-list-section-collapse > li > [data-test-automation-class=conversation-list-item] > p[title] {
+    color: #999;
+}
+/* selected person name */
+[data-test-automation-id=leftRail] ul.conversation-list-section-collapse > li > div.selected.selected.selected.selected.selected.selected {
+    background: #311 !important;
+    color: #999;
+}
+/* New Folder button */
+[data-test-automation-id=leftRail] [data-test-automation-id=createFolder] {
+    background: #000;
+}
+[data-test-automation-id=leftRail] [data-test-automation-id=createFolder] > p{
+    color: #999;
+}
+/* conversation name (probably only necessary when using light theme which the site defaults to occasionally) */
+[data-test-automation-id=leftRail] > div.conversation-list-section-collapse div.conversation-list-item__middle-wrapper > p {
+    color: #999;
+}
+
+/* END left sidebar */
+
+/* BEGIN top icon bar/dropdowns */
+
+/* Dial Pad/New Actions buttons */
+button.MuiFab-root.MuiButtonBase-root {
+    background: #444;
+}
+button.MuiFab-root.MuiButtonBase-root:hover {
+    background: #944;
+}
+button.MuiFab-root.MuiButtonBase-root .icon svg {
+    color: #bbb;
+}
+
+/* User profile button dropdown */
+.MuiPaper-root {
+    background: #000;
+    color: #999;
+    border: 1pt solid #444;
+}
+.MuiPaper-root > div {
+    background: transparent;
+    color: inherit;
+}
+/* User profile button dropwdown “contact card” */
+[class*=StyledContactWrapper],
+[class*=StyledContactWrapper] [class*=StyledContactInfoName]{
+    background: #000;
+    color: inherit;
+}
+/* The other members of the user profile button dropdown */
+.MuiListItem-root {
+  color: inherit;
+}
+/* The sub-dropdowns of the profile button dropdown */
+.MuiListItem-button {
+    background: transparent;
+    color: inherit;
+}
+.MuiListItem-button.MuiListItem-button:hover {
+    background: #211;
+}
+
+/* END top icon bar/dropdowns */
+
+/* Remove the annoying “We recommend you use a supported browser or install the app” banner. */
+div[data-test-automation-id=unsupportedBrowserBanner] {
+    display: none;
+}
+
 }
