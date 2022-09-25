@@ -61,8 +61,8 @@ ul[data-test-automation-id=search-records],
 div[data-test-automation-id=search-item-text],
 ul[data-test-automation-id=search-results],
 h3[class],
-div[class],
-[data-test-automation-id][data-test-automation-id] {
+div[class]:not([data-test-automation-id=presence]),
+[data-test-automation-id][data-test-automation-id]:not([data-test-automation-id=presence]) {
     background: inherit;
     color: inherit;
 }
@@ -160,9 +160,9 @@ a[id].at_mention_compose {
 .MuiPaper-root .MuiTypography-root[data-color],
 .MuiFormControlLabel-root.RcFormControlLabel-root,
 .MuiTypography-root.MuiFormControlLabel-label,
-div[data-test-automation-id],
+div[data-test-automation-id]:not([data-test-automation-id=presence]),
 div[data-form-type],
-[data-test-automation-class][data-test-automation-class],
+[data-test-automation-class][data-test-automation-class]:not([data-test-automation-id=presence]),
 div[data-name],
 #app-main-section,
 .MuiListItemText-primary.RcListItemText-primary,
